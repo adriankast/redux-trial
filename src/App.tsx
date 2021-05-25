@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
 import Login from './features/login/Login'
+import { useToken } from './app/useToken'
+import Notes from './features/notes/Notes'
 
 function App() {
+  const token = useToken();
   return (
     <div className="App">
-      <h3>TODO: password protected content</h3>
+      {token.status === "loggedIn"
+      ? <Notes />
+      : "please login first to see the Notes"}
       <div>
         <Login />
       </div>

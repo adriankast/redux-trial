@@ -1,5 +1,5 @@
 // A mock function to mimic getting a token from a server
-export function fetchToken(password = "") {
+export const fetchToken = (password = "") => {
     return new Promise<{ data: string }>((resolve, reject) =>
       setTimeout(() => {
         if (password === "secret") {

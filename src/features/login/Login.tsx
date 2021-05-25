@@ -1,6 +1,4 @@
 import React, { useState } from "react"
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { loginThunk, resetToken, selectLogin } from "./loginSlice"
 import { useLogin } from "./useLogin"
 
 const Login = () =>
